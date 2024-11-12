@@ -1,0 +1,14 @@
+$greeting = Hello, world!
+$name = Alice
+
+Greet $name with $greeting
+
+$response = {response}
+
+If $response contains "Alice", then:
+    Say "Nice to meet you, Alice!"
+Else:
+    Say "I'm sorry, I didn't catch your name."
+
+$farewell = Goodbye, $name!
+Say $farewell

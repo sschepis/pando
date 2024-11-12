@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Pando</title>
+    <link rel="stylesheet" href="${cssUri}">
+</head>
+<body>
+    <button id="theme-toggle">Toggle Theme</button>
+    <h1>Welcome to Pando</h1>
+    
+    <input type="text" id="search-bar" placeholder="Search...">
+
+    <div id="progress-tracker">
+        <div class="progress-step" data-step="1">1</div>
+        <div class="progress-step" data-step="2">2</div>
+        <div class="progress-step" data-step="3">3</div>
+        <div class="progress-step" data-step="4">4</div>
+    </div>
+
+    <div class="tabs">
+        <div class="tab active" data-tab="intro">Introduction</div>
+        <div class="tab" data-tab="tutorial">Tutorial</div>
+        <div class="tab" data-tab="demo">Interactive Demo</div>
+        <div class="tab" data-tab="resources">Resources</div>
+    </div>
+
+    <div id="intro" class="tab-content active">
+        <div class="section">
+            <h2>What is Pando?</h2>
+            <p>Pando is a powerful domain-specific AI prompt language designed for building sophisticated AI agents. With Pando, you can create, manage, and execute complex AI prompts with ease, streamlining your AI development workflow.</p>
+            <p>Pando allows you to define structured prompts that can include variables, conditions, and even nested prompts. This structured approach enables you to create more dynamic and context-aware AI interactions.</p>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Intuitive Syntax</h3>
+                    <p>Write prompts in a clear, structured format that's easy to read and maintain. Pando's syntax is designed to be familiar to programmers while remaining accessible to non-technical users.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>AI Agent Creation</h3>
+                    <p>Develop intelligent AI agents capable of performing complex tasks and reasoning. Pando's structure allows you to create agents with specific roles, knowledge bases, and decision-making capabilities.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Seamless Integration</h3>
+                    <p>Integrate Pando seamlessly with your existing development environment and workflows. Use Pando prompts in your applications, chatbots, or any system that interacts with AI models.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Extensible Framework</h3>
+                    <p>Extend Pando's capabilities with custom functions and integrations to suit your needs. Create reusable prompt components and build complex AI systems with ease.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="tutorial" class="tab-content">
+        <div class="section">
+            <h2>Quick Start Tutorial</h2>
+            <ol id="tutorial-steps">
+                <li>Create a new Pando file:
+                    <ul>
+                        <li>Use the command palette (Ctrl+Shift+P or Cmd+Shift+P)</li>
+                        <li>Search for "Pando: Create New File" and select it</li>
+                        <li>Choose a name for your file (e.g., "my_first_prompt.pando")</li>
+                    </ul>
+                </li>
+                <li>Write your first prompt:
+                    <pre>prompt myFirstPrompt {
+    "Hello! I'm an AI assistant created with Pando. 
+    What would you like to know about Pando?"
+
+    user_input = input()
+
+    if user_input contains "syntax" {
+        "Pando uses a simple, intuitive syntax. Here's a basic example:
+        prompt examplePrompt {
+            'This is a simple Pando prompt'
+        }"
+    } else if user_input contains "integration" {
+        "Pando can be easily integrated into your existing projects.
+        You can use Pando prompts in web applications, chatbots, 
+        or any system that interacts with AI models."
+    } else {
+        "Pando is a powerful tool for creating AI prompts. 
+        It allows you to structure your prompts with variables, 
+        conditions, and even nested prompts. What specific 
+        aspect would you like to know more about?"
+    }
+}</pre>
+                </li>
+                <li>Run your prompt:
+                    <ul>
+                        <li>Use the command palette again</li>
+                        <li>Search for "Pando: Run Prompt" and select it</li>
+                        <li>Your prompt will be executed, and you'll see the output in the terminal</li>
+                    </ul>
+                </li>
+                <li>Interact with your AI:
+                    <ul>
+                        <li>The AI will greet you and ask what you'd like to know about Pando</li>
+                        <li>Try asking about "syntax" or "integration" to see how the prompt responds differently</li>
+                        <li>Experiment with different inputs to explore the prompt's behavior</li>
+                    </ul>
+                </li>
+            </ol>
+            <a href="#" class="cta-button">Explore Advanced Tutorials</a>
+        </div>
+    </div>
+
+    <div id="demo" class="tab-content">
+        <div class="section">
+            <h2>Interactive Demo</h2>
+            <p>Try out Pando's capabilities right here! Write a Pando prompt in the input area below, or select one of the example prompts to get started.</p>
+            <div id="demo-section">
+                <div id="demo-input">
+                    <h3>Input</h3>
+                    <select id="example-prompts">
+                        <option value="">Select an example prompt...</option>
+                        <option value="simple">Simple Greeting</option>
+                        <option value="conditional">Conditional Response</option>
+                        <option value="nested">Nested Prompt</option>
+                    </select>
+                    <textarea id="demo-prompt" rows="10" cols="40">prompt myDemo {
+    "What would you like to know about Pando?"
+}</textarea>
+                    <button id="run-demo" class="cta-button">Run Demo</button>
+                </div>
+                <div id="demo-output">
+                    <h3>Output</h3>
+                    <div id="demo-result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="resources" class="tab-content">
+        <div class="section">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="#" target="_blank">Comprehensive Documentation</a> - Dive deep into Pando's features and capabilities</li>
+                <li><a href="#" target="_blank">Video Tutorials</a> - Learn Pando through step-by-step video guides</li>
+                <li><a href="#" target="_blank">Community Forums</a> - Connect with other Pando users and get help</li>
+                <li><a href="#" target="_blank">FAQ</a> - Find answers to common questions about Pando</li>
+                <li><a href="#" target="_blank">API Reference</a> - Detailed information on Pando's API for advanced users</li>
+                <li><a href="#" target="_blank">Pando Blog</a> - Stay updated with the latest Pando news and tips</li>
+                <li><a href="#" target="_blank">Example Projects</a> - Explore real-world projects built with Pando</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Connect With Us</h2>
+            <p>Join our vibrant community of AI enthusiasts and developers!</p>
+            <div class="social-links">
+                <a href="https://twitter.com/PandoAI" target="_blank">Twitter</a>
+                <a href="https://github.com/PandoAI" target="_blank">GitHub</a>
+                <a href="https://discord.gg/pandoai" target="_blank">Discord</a>
+                <a href="https://www.linkedin.com/company/pandoai" target="_blank">LinkedIn</a>
+                <a href="https://www.youtube.com/c/PandoAI" target="_blank">YouTube</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="show-welcome-checkbox">
+        <label>
+            <input type="checkbox" id="show-welcome" checked>
+            Show this welcome page on startup
+        </label>
+    </div>
+
+    <script nonce="${nonce}" src="${jsUri}"></script>
+</body>
+</html>

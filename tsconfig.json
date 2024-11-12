@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2019",
+    "outDir": "out",
+    "lib": ["es2019", "dom"],
+    "sourceMap": true,
+    "rootDir": ".",
+    "strict": true,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*"],
+      "src/*": ["src/*"],
+      "@ai/*": ["src/ai/*"],
+      "@debug/*": ["src/debug/*"],
+      "@extension/*": ["src/extension/*"],
+      "@languageServer/*": ["src/languageServer/*"],
+      "@parser/*": ["src/parser/*"],
+      "@pandoExecutionEngine/*": ["src/pandoExecutionEngine/*"],
+      "@utils/*": ["src/utils/*"]
+    },
+    "types": [
+      "node",
+      "jest",
+      "vscode"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./test/types"
+    ],
+    "moduleResolution": "node"
+  },
+  "include": [
+    "src/**/*",
+    "test/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    ".vscode-test"
+  ]
+}
